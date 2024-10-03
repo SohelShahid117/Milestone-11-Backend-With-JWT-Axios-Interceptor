@@ -1,9 +1,9 @@
 import React from "react";
-import loginImg from "../../assets/login/login.svg";
 import { Link } from "react-router-dom";
+import loginImg from "../../assets/login/login.svg";
 
-const Login = () => {
-  const handleLogin = (e) => {
+const Signup = () => {
+  const handleSignup = (e) => {
     e.preventDefault();
     console.log(e);
   };
@@ -14,8 +14,20 @@ const Login = () => {
           <img src={loginImg} alt="" srcset="" />
         </div>
         <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
-          <h1 className="text-3xl text-center mt-10 font-bold">Login</h1>
-          <form className="card-body" onSubmit={handleLogin}>
+          <h1 className="text-3xl text-center mt-10 font-bold">Signup</h1>
+          <form className="card-body" onSubmit={handleSignup}>
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text">Username</span>
+              </label>
+              <input
+                type="text"
+                name="username"
+                placeholder="username"
+                className="input input-bordered"
+                required
+              />
+            </div>
             <div className="form-control">
               <label className="label">
                 <span className="label-text">Email</span>
@@ -35,7 +47,7 @@ const Login = () => {
               <input
                 type="password"
                 name="password"
-                placeholder="password"
+                placeholder="confirm password"
                 className="input input-bordered"
                 required
               />
@@ -47,19 +59,19 @@ const Login = () => {
             </div>
             <div className="form-control mt-6">
               {/* <button className="btn bg-orange-600 text-white hover:btn-warning">
-                Login
-              </button> */}
+                  Login
+                </button> */}
               <input
                 className="btn bg-orange-600 text-white hover:btn-warning"
                 type="submit"
-                value="Login"
+                value="Signup"
               />
             </div>
           </form>
           <p className="p-10">
-            New to Car Doctors?Go to
-            <Link className="text-orange-600 font-semibold" to="/signup">
-              Sign Up
+            Already have an account?Go to
+            <Link className="text-orange-600 font-semibold" to="/login">
+              Login
             </Link>
           </p>
         </div>
@@ -68,4 +80,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Signup;
