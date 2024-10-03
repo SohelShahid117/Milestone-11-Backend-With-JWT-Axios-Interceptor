@@ -57,7 +57,9 @@ const Navbar = () => {
       </div>
       <div className="navbar-end">
         {/* <a className="btn">Appointment</a> */}
-        <button className="btn btn-outline btn-warning">Appointment</button>
+        <button className="btn btn-outline border-orange-600 text-orange-600 hover:bg-transparent hover:text-orange-600 hover:border-orange-600">
+          Appointment
+        </button>
       </div>
     </div>
   );
